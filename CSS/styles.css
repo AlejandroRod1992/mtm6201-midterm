@@ -3,9 +3,36 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: century-gothic, sans-serif;
-    line-height: 1.8;
+    line-height: 1.5;
   
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
+ /* ADDS BORDER BOX TO MAKE RESPONSIVE LAYOUT */
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  h1 {
+    font-family: Permanent Marker;
+    font-size: 40px;  
+  }
+
+/*ADDS WRAPER CLASS TO CONTROL SEC/DIV OF THE WEB */
+
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    max-height:max-content;
+    overflow: hidden;
+    padding: 0 30px 0 30px;
+}
+
+
+
+  
+
