@@ -1,0 +1,18 @@
+body {
+    max-width: 600px;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: century-gothic, sans-serif;
+    line-height: 1.5;
+  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-family: Permanent Marker;
+    font-size: 40px;  
+  }
+
+  
