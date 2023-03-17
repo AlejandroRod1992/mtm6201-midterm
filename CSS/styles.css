@@ -95,24 +95,7 @@ a:hover {
     transform-origin: 0% 100%;
 }
 
-/* TRANSFORM HAMBURGER MENU INTO CROSS */
 
-#menuToggle input:checked~span {
-    opacity: 1;
-    transform: rotate(45deg) translate(2px, -2px);
-}
-
-/* Hides middle stick */
-#menuToggle input:checked~span:nth-last-child(2) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.1, 0.2);
-}
-
-/* CHANGES DIRECTION OF STICK TO FORM CROSS */
-#menuToggle input:checked~span:nth-last-child(1) {
-    opacity: 1;
-    transform: rotate(-45deg) translate(2px, -5px);
-}
 
 #logo {
     position: absolute;
