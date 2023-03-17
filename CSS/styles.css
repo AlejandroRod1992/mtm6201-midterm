@@ -22,7 +22,7 @@ body {
   .wrapper {
     max-width: 600px;
     margin: 0 auto;
-    max-height:max-content;
+    max-height:fit-content;
     overflow: hidden;
     padding: 0 30px 0 30px;
 }
@@ -39,7 +39,6 @@ nav ul{
     font-style: normal;
 }
 
-/* HAMBURGER MENU TAKEN FROM https://codepen.io/erikterwan/pen/grOZxx?editors=1100 Made by Erik Terwan */
 
 a {
     text-decoration: none;
@@ -53,50 +52,6 @@ a:hover {
     padding: 10px;
 }
 
-#menuToggle {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 25px;
-    z-index: 1;
-}
-
-#menuToggle input {
-    display: block;
-    width: 45px;
-    height: 40px;
-    position: absolute;
-    top: -7px;
-    left: -6px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-}
-
-#menuToggle span {
-    display: block;
-    width: 35px;
-    height: 7px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #79B472;
-    border-radius: 5px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.9s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        opacity .5s ease;
-}
-
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-
-
-
 #logo {
     position: absolute;
     margin-top: 8px;
@@ -105,18 +60,123 @@ a:hover {
     height: 85px;
 }  
 
+/* hambure menu credits -- https://codepen.io/alvarotrigo/pen/poWRrQW  -- */
+
+
+#toggle {
+    display: none;
+  }
+  
+  /**
+    Hamburger
+  **/
+  .hamburger {
+    position: absolute;
+    top: 5em;
+    right: 5%;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 2em;
+    height: 45px;
+    z-index: 5;
+  }
+  
+  .hamburger div {
+    position: relative;
+    width: 3em;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #f8982b;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /**
+  Nav Styles
+  **/
+  .nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #090E6B;
+    top: -100%; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+  }
+  .nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+  nav {
+    text-align: left;
+    margin-left: 25%;
+  }
+  nav a {
+    position: relative;
+    text-decoration: none;
+    color: #6ecddd;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+  }
+  nav a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: white;
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+  }
+  nav a:hover {
+    color: white;
+  }
+  nav a:hover:before {
+    height: 100%;
+  }
+  
+  /**
+  Animations
+  **/
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+  }
+  
+  #toggle:checked + .hamburger + .nav {
+    top: 0;
+    transform: scale(1);
+  }
+
+
 h1,h2 {
     font-family: Permanent Marker;
 }
+.banner .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
 
+}
 h1{
     color: #C5E0F5;
     text-shadow: 1px 1px 2px grey;
     font-size: 40px;
     margin-top: 10px;
-    padding-right: 5px;
-    padding-left: 0;
-    margin-right: 100px;
     font-style: oblique;
 }
 
@@ -129,6 +189,7 @@ h1{
     background-position: center;
     display: flex;
     position: relative; 
+    z-index: -1;
 }
 
 h2 {
@@ -138,6 +199,7 @@ h2 {
     margin: 10px;
     color: #22578A;
     text-shadow: 5px 5px 10px gray;
+    -webkit-text-stroke: 1px #090E6B;
 }
 
 #donate, #check {
@@ -155,6 +217,12 @@ h2 {
     box-shadow: 5px 5px 10px #000c4a;
 }
 
+.wrapper .HelpUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .whatinfo p{
     margin-bottom: 30px;
@@ -164,12 +232,22 @@ h2 {
         background-color: #C5E0F5;
         margin: 0 auto;
         padding-bottom: 0; 
+
 }
 
+.whatPhoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #what {
-    border-radius: 50px;
+    border: #000000 solid 2px;
     margin: 50px 0 30px 0;
+    box-shadow: 0 2px 15px grey;
+    width: 440px;
+  
+
 
 }
 
@@ -201,6 +279,41 @@ h2 {
     color: #C5E0F5;
     text-shadow: 0 1px 2px #000c4a;
 }
+
+iframe {
+    margin: 20px 0 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px grey;
+    height: 200px;
+    width: 100%;
+}
+
+form{
+   background-color: #C5E0F5;
+   padding: 20px;
+   border-radius: 25px;
+   width: 100%;
+   justify-content: center;
+   margin-bottom: 25px;
+}
+
+input[type=text],[type=tel],[type=email] {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 1px #c5e0c5;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    resize: vertical;
+    box-shadow: inset 1px 1px 2px #c5e0c5;
+}
+    
 
 Footer {
     background-color:#C5E0F5 ;
@@ -323,6 +436,5 @@ nav ul li a {
 h1 {
     padding: 0;
     margin right: 710px;
-    font-size: 75px;
-    color:
+    font-size: 75px;  
 }
