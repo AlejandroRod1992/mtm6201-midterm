@@ -256,8 +256,6 @@ h2 {
     font-size: 20px;
     width: 165px;
     height: 50px;
-    margin-left: 65px;
-    margin-bottom: 5px;
 }
 
 .HelpUsBanner {
@@ -267,7 +265,7 @@ h2 {
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 180px;
+    height: 230px;
 }
 
 .HelpUs {
@@ -433,8 +431,8 @@ nav ul li a {
     position: relative;
     }
 
-h1 {
+/* h1 {
     padding: 0;
-    margin right: 710px;
+    margin-right: 710px;
     font-size: 75px;  
-}
+} */
