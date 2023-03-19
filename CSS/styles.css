@@ -62,14 +62,15 @@ a:hover {
 
 /* hambure menu credits -- https://codepen.io/alvarotrigo/pen/poWRrQW  -- */
 
+  /**
+    Hamburger
+  **/
 
 #toggle {
     display: none;
   }
   
-  /**
-    Hamburger
-  **/
+
   .hamburger {
     position: absolute;
     top: 5em;
@@ -161,9 +162,12 @@ a:hover {
     transform: scale(1);
   }
 
+/*****************************************
+*****************************************/
+
 
 h1,h2 {
-    font-family: Permanent Marker;
+    font-family: "Permanent Marker";
 }
 .banner .wrapper{
     display: flex;
@@ -376,13 +380,73 @@ textarea {
     box-shadow: inset 1px 1px 2px #c5e0c5;
 }
 
+/***********************************************
+************************************************
+*************style about page*******************
+***********************************************/
+.aboutpage{
+    background-color: #ffffff;
+}
+.about h3{
+    color: #79B472;
+    font-size: 30px;
+
+}
+
+.about .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.getinvolve .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.getinvolve, .ourmessage{
+    margin: auto;
+    text-align: center;
+}
+
+.getinvolve p{
+    margin: 0 30px;
+    text-align: justify;
+}
+.getinvolve{
+    margin-bottom: 30px;
+}
+
+.Vietpic {
+    width: 350px;
+}
+
+.ourmessage .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourmessage p{
+    margin-left: 140px;
+    margin-right: 30px;
+    text-align: justify;
+
+}
+
+footer{
+    margin-top: 30px;
+}
+
+
 
 @media screen and (min-width: 600px){
     
     /*set min-width for entire body to constrict content and background*/
-    html {
-        min-width: 600px; 
-    }
+
 
     body {
         background-color: #C5E0F5;
@@ -439,7 +503,8 @@ nav ul li a {
 /* SET CONTAINER TO MAX WIDTH TO WRAP CONTET OF ENTIRE PAGE */
 
 .wrapper {
-    max-width: 1200px;   
+    max-width: 1280px;
+
 }
 
 .banner {
@@ -455,8 +520,7 @@ nav ul li a {
     position: relative;
     }
 
-/* h1 {
-    padding: 0;
-    margin-right: 710px;
-    font-size: 75px;  
-} */
+    h1{
+        font-size: 100px;
+        margin-bottom: 30px;
+    }
