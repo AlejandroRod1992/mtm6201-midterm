@@ -453,51 +453,82 @@ footer{
         min-width: 100%;
         padding: 0;
     }
-    header {
-        background-color: #22578A;
-        fill-opacity: 1;
-    }
+
 
     #logo {
         padding: 0;
-        margin: 0 auto;
+        margin: -41px 10px;
+        height: 80px;
     }
 
-    nav {
-        background-color: #22578A;
-    }
-}
+
 
 /* Changes style of nav */
+/********************************
 
-.topnav, nav {
-    max-width: 100%;
-    display: flex;
-    height: 120px;
-    justify-content: space-around;        
-} 
+*********************************/
 
-#logo {
-    position: static;
-    margin: 20px 50px 20px 0px;
-    padding-right: 250px;
-    height: 80px;
-}
-
-.topnav .logo a:hover {
+  .hamburger {
+    position: absolute;
+    top: 5em;
+    right: 5%;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 2em;
+    height: 45px;
+    z-index: 5;
+  }
+  
+  .hamburger div {
+    position: absolute;
+    width: 0;
+    height: 0;
     background-color: transparent;
-}
-#menuToggle {
-    display: none;
-}
-
-ul {
+    margin-top: 0;
+    transition: none;
+  }
+  
+  /**
+  Nav Styles
+  **/
+   
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    transition: none;
+    transform: none;
+    justify-content: space-around;
+    height: fit-content;
+    background-color: #090E6B;
     display: flex;
-    align-items: center;       
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  nav a {
+    position: relative;
+    text-decoration: none;
+    color: #6ecddd;
+    display: inline-block;
+    margin: 10px 30px;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+
+    
+  }
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: auto;
 }
 
-nav ul li a {
-    margin: 50px;
+nav a:hover {
+  color: none;
+  background-color: transparent;
+
 }
 
 /* SET CONTAINER TO MAX WIDTH TO WRAP CONTET OF ENTIRE PAGE */
@@ -505,6 +536,9 @@ nav ul li a {
 .wrapper {
     max-width: 1280px;
 
+}
+.main {
+    margin-top: 50px;
 }
 
 .banner {
@@ -524,3 +558,70 @@ nav ul li a {
         font-size: 100px;
         margin-bottom: 30px;
     }
+
+    #what{
+        width: 820px;
+    }
+
+    #donate, #check {  
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        height: 55px;
+        width: 180px;
+    }   
+
+    .whatPhoto:hover img{
+        opacity: 1;
+        animation: flash 1.5s;
+    }
+
+    @-webkit-keyframes flash {
+        0% {
+            opacity: .4;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+
+    footer .wrapper{
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer{
+        margin-top: 100px;
+    }
+
+/*******************************
+********************************
+*******styles contact page *****
+*******************************/
+
+
+.form h2 {
+   font-size: 100px;
+}
+
+iframe { 
+    border-radius: 15px;
+    box-shadow: 0 5px 10px grey;
+    height: 200px;
+    width: 70%;
+    
+}
+.map {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+}
