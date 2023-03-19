@@ -526,7 +526,6 @@ nav {
 }
 
 nav a:hover {
-  color: none;
   background-color: transparent;
 
 }
@@ -621,7 +620,41 @@ iframe {
     align-items: center;
 }
 
+/*******************************
+********************************
+*******styles about page *****
+*******************************/
 
+.about img{
+    width: 820px;
+    margin: 10px 0;
+}
 
+.getinvolve .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.Vietpic{
+    width: 820px;
+    margin-bottom: 40px;
+}
+
+.ourmessage .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ourmessage img{
+    width: 580px;
+    margin-bottom: 40px;
+}
+
+.getinvolve h2 {
+    margin-top: 100px;
+}
 }
